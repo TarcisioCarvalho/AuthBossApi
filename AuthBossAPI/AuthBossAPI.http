@@ -1,6 +1,0 @@
-@AuthBossAPI_HostAddress = http://localhost:5147
-
-GET {{AuthBossAPI_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

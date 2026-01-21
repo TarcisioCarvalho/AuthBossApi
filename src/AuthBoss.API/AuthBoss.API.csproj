@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AuthBoss.Application\AuthBoss.Application.csproj" />
+    <ProjectReference Include="..\AuthBoss.Comunication\AuthBoss.Communication.csproj" />
+  </ItemGroup>
+
 </Project>

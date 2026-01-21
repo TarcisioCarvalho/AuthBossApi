@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AuthBoss.Comunication\AuthBoss.Communication.csproj" />
+  </ItemGroup>
+
 </Project>
