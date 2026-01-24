@@ -1,4 +1,4 @@
-﻿namespace AuthBoss.Domain.Models;
+﻿namespace AuthBoss.Domain.Entities;
 public class User
 {
     public Guid Id { get; set; }
