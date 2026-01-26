@@ -1,15 +1,12 @@
 ﻿using AuthBoss.Domain.Security;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AuthBoss.Infrastructure.Security;
 public class PasswordHasher : IPasswordHasher
 {
     public string Generate(string password)
     {
+        var salt = Guid.NewGuid().ToString();
+        var passwordWithSalt = password + salt;
         throw new NotImplementedException();
     }
 
