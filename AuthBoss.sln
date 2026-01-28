@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthBoss.API", "src\AuthBos
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthBoss.Infrastructure", "src\AuthBoss.Infrastructure\AuthBoss.Infrastructure.csproj", "{81378D87-24AC-4E4E-A097-AFCB3B809827}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthBoss.Infrastructure.Tests", "tests\AuthBoss.Infrastructure.Tests\AuthBoss.Infrastructure.Tests.csproj", "{26AD263B-56C4-4374-8BBE-DF037698A8A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{81378D87-24AC-4E4E-A097-AFCB3B809827}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81378D87-24AC-4E4E-A097-AFCB3B809827}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81378D87-24AC-4E4E-A097-AFCB3B809827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26AD263B-56C4-4374-8BBE-DF037698A8A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26AD263B-56C4-4374-8BBE-DF037698A8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26AD263B-56C4-4374-8BBE-DF037698A8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26AD263B-56C4-4374-8BBE-DF037698A8A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{3A551718-731C-400F-80B5-6880096E50BD} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{44AA70D9-2911-4F3C-8CE7-419DD9C0220D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{81378D87-24AC-4E4E-A097-AFCB3B809827} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{26AD263B-56C4-4374-8BBE-DF037698A8A5} = {AA5F8A3E-CC6A-4A75-BCE7-08AF12BB9EA7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9922D0D7-860F-4C90-B095-FC96726755A6}
