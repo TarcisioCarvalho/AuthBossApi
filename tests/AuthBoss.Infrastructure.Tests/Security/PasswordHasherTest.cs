@@ -5,10 +5,10 @@ using Xunit;
 namespace AuthBoss.Infrastructure.Tests.Security;
 public class PasswordHasherTest
 {
-    [Fact]
-    public void Success()
+    [Theory]
+    [InlineData("Teste")]
+    public void Success(string passwordTest)
     {
-        string passwordTest = "password";
         var hash = new PasswordHasher().Generate(passwordTest);
         hash.Should().NotBeNull();
     }
