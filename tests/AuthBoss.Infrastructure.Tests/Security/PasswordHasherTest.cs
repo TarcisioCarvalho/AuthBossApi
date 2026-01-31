@@ -5,11 +5,16 @@ using Xunit;
 namespace AuthBoss.Infrastructure.Tests.Security;
 public class PasswordHasherTest
 {
-    [Theory]
-    [InlineData("Teste")]
-    public void Success(string passwordTest)
+    [Fact]
+    public void Success()
     {
+        string passwordTest = "!abc1234";
         var hash = new PasswordHasher().Generate(passwordTest);
         hash.Should().NotBeNull();
+        var parts = hash.Split('$');
+        parts.Length.Should().Be(3);
+        parts[0].Should().Be("1000");
+        Guid.TryParse(parts[1], out var id).Should().BeTrue();
+        parts[2].Length.Should().Be(64);
     }
 }
