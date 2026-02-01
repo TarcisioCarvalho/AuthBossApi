@@ -16,5 +16,8 @@ public class PasswordHasherTest
         parts[0].Should().Be("1000");
         Guid.TryParse(parts[1], out var id).Should().BeTrue();
         parts[2].Length.Should().Be(64);
+
+        var isValid = new PasswordHasher().Verify(passwordTest, hash);
+        isValid.Should().BeTrue();
     }
 }

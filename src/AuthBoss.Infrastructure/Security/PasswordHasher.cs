@@ -7,6 +7,8 @@ public class PasswordHasher : IPasswordHasher
 {
     public string Generate(string password)
     {
+        if (string.IsNullOrWhiteSpace(password))
+            throw new ArgumentException("password canot be null or empty", nameof(password));
         var salt = Guid.NewGuid().ToString();
         var passwordWithSalt = password + salt;
         string passwordHashed = passwordWithSalt;
