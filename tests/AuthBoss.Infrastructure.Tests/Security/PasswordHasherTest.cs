@@ -20,4 +20,13 @@ public class PasswordHasherTest
         var isValid = new PasswordHasher().Verify(passwordTest, hash);
         isValid.Should().BeTrue();
     }
+
+    [Theory]
+    [InlineData("")]
+    [InlineData(null)]
+    public void Error_Password_Invalid(string? password)
+    {
+        Action act = () => new PasswordHasher().Generate(password);
+        act.Should().Throw<ArgumentException>();
+    }
 }
