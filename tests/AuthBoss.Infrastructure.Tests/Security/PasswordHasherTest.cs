@@ -29,4 +29,23 @@ public class PasswordHasherTest
         Action act = () => new PasswordHasher().Generate(password);
         act.Should().Throw<ArgumentException>();
     }
+
+    [Fact]
+    public void Error_Passowrd_Incorrect()
+    {
+        string passwordTest = "!abc1234";
+
+        var hash = new PasswordHasher().Generate(passwordTest);
+        hash.Should().NotBeNull();
+        var parts = hash.Split('$');
+        parts.Length.Should().Be(3);
+        parts[0].Should().Be("1000");
+        Guid.TryParse(parts[1], out var id).Should().BeTrue();
+        parts[2].Length.Should().Be(64);
+
+        string passwordWrong = "!abc12345";
+
+        var isValid = new PasswordHasher().Verify(passwordWrong, hash);
+        isValid.Should().BeFalse();
+    }
 }
